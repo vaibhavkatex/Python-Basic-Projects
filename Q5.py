@@ -1,8 +1,8 @@
-# Q5 - Dictionaries + Functions + Control Structures
-
+# Write a function student_database() that uses a dictionary (roll number as key) tostore student records.
 def student_database():
     students = {}
 
+# Provide a menu using while loop:Add student (name, age, city)Search student by roll number
     while True:
         print("\n----- Student Database -----")
         print("1. Add Student")
@@ -45,6 +45,7 @@ def student_database():
             except ValueError:
                 print("Invalid Roll Number!")
 
+# Display all students
         elif choice == "3":
             if len(students) == 0:
                 print("No Student Records Found!")
@@ -55,6 +56,7 @@ def student_database():
                     print("Age:", data["Age"])
                     print("City:", data["City"])
 
+# ExitUse get(), update(), and proper exception handling for invalid inputs
         elif choice == "4":
             print("Program Ended.")
             break
