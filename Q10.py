@@ -1,12 +1,13 @@
-# Q10 - Smart Calculator & Data Manager
+#Import Moduals 
 
 import math
 import random
 from datetime import datetime
 
+#create a Dictionary
 history = {}
 
-
+# Create a Function def arithmetic():
 def arithmetic():
     try:
         a = float(input("Enter First Number: "))
@@ -40,7 +41,7 @@ def arithmetic():
     except ValueError:
         print("Invalid Input!")
 
-
+# Creating a Function def scientific():
 def scientific():
     try:
         num = float(input("Enter Number: "))
@@ -50,13 +51,13 @@ def scientific():
     except ValueError:
         print("Invalid Input!")
 
-
+# Creating a Function def random_numbers():
 def random_numbers():
     nums = random.sample(range(1, 101), 5)
     print("Random Numbers:", nums)
     history[str(datetime.now())] = nums
 
-
+# Creating a Function def view_history():
 def view_history():
     if len(history) == 0:
         print("No History Available.")
@@ -65,7 +66,7 @@ def view_history():
         for time, result in history.items():
             print(time, ":", result)
 
-
+# main Menu
 while True:
     print("\n----- Smart Calculator -----")
     print("1. Basic Arithmetic")
