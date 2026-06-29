@@ -1,23 +1,26 @@
-# Q4 - OOP + Lists + Exception Handling
 
+# Create a class Student with attributes: name, roll_no, and marks_list (a list ofmarks).
 class Student:
-
+# Include methods:__init__ to initialize the student.
     def __init__(self, name, roll_no):
         self.name = name
         self.roll_no = roll_no
         self.marks_list = []
 
+# add_mark(mark) to add a mark to the list (handle invalid marks).
     def add_mark(self, mark):
         if 0 <= mark <= 100:
             self.marks_list.append(mark)
         else:
             print("Invalid Marks! Enter marks between 0 and 100.")
 
+# get_average() to return the average.
     def get_average(self):
         if len(self.marks_list) == 0:
             return 0
         return sum(self.marks_list) / len(self.marks_list)
 
+# display_info() to show all details.
     def display_info(self):
         print("\n----- Student Details -----")
         print("Name:", self.name)
